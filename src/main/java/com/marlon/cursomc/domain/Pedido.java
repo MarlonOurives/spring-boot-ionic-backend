@@ -92,6 +92,18 @@ public class Pedido implements Serializable {
 	public void setPagamento(Pagamento pagamento) {
 		this.pagamento = pagamento;
 	}
+	public Cliente getCliente() {
+	    return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+	    this.cliente = cliente;
+	}
+	public Endereco getEnderecoDeEntrega() {
+	    return enderecoDeEntrega;
+	}
+	public void setEnderecoDeEntrega(Endereco enderecoDeEntrega) {
+	    this.enderecoDeEntrega = enderecoDeEntrega;
+	}
 
 	@Override
 	public int hashCode() {
@@ -101,6 +113,7 @@ public class Pedido implements Serializable {
 		return result;
 	}
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
