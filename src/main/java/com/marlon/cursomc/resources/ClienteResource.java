@@ -22,8 +22,8 @@ public class ClienteResource {
 	private ClienteService service;
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	//=== O PathVariable vai avisar que o id vai vim pelo get ===//
-	public ResponseEntity<?> find(@PathVariable Integer id) {
-		Cliente obj = service.buscar(id);
+	public ResponseEntity<Cliente> find(@PathVariable Integer id) {
+		Cliente obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 }
